@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render notfoundpage correctly 1`] = `
+<div>
+  Not there, Bitch. 
+  <Link
+    to="/"
+  >
+    Go Back
+  </Link>
+</div>
+`;
