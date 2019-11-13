@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 //import action generator from actions expenses to allow remove function.
 //Connect the component to access dispatch. So it has a way to change the store with remove and edit
 //Wire up onclick like the one in expense list filters
-const ExpenseListItem = ({description, id, amount, createdAt}, props) => (
+const ExpenseListItem = ({description, id, amount, createdAt}) => (
   <div>
     <Link to={`/edit/${id}`}>
       <h3>{description}</h3>
