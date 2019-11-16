@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import moment from 'moment';
+import numeral from 'numeral';
 
 //import action generator from actions expenses to allow remove function.
 //Connect the component to access dispatch. So it has a way to change the store with remove and edit
@@ -9,7 +11,11 @@ const ExpenseListItem = ({description, id, amount, createdAt}) => (
     <Link to={`/edit/${id}`}>
       <h3>{description}</h3>
     </Link>
-    <p>Date: {createdAt} | Amount:{amount}</p>
+    <p>
+      Date: {moment({createdAt}).format('MMMM Do, YYYY')}
+      |
+      Amount:{numeral(amount / 100).format('$0,0.00')}
+    </p>
   </div>
 );
 
